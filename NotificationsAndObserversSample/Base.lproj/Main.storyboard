@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BaseViewController" customModule="NotificationsAndObserversSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mqj-xr-zgB">
+                                <rect key="frame" x="67" y="220" width="240" height="256"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pkw-KY-maN" userLabel="Chosen Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msD-gy-Pab" userLabel="Chosen label">
+                                        <rect key="frame" x="99" y="128" width="42" height="128"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUT-2z-QfI">
+                                <rect key="frame" x="16" y="519" width="343" height="40"/>
+                                <state key="normal" title="Choose Button"/>
+                                <connections>
+                                    <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cU9-fj-Nef"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mqj-xr-zgB" secondAttribute="bottom" constant="191" id="0G0-4Z-FmP"/>
+                            <constraint firstItem="SUT-2z-QfI" firstAttribute="top" secondItem="mqj-xr-zgB" secondAttribute="bottom" constant="43" id="H6D-QY-EH7"/>
+                            <constraint firstItem="mqj-xr-zgB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="220" id="T63-eh-YPJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SUT-2z-QfI" secondAttribute="bottom" constant="108" id="WzH-ne-aKH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mqj-xr-zgB" secondAttribute="trailing" constant="68" id="aDk-Py-vCA"/>
+                            <constraint firstItem="mqj-xr-zgB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="aJv-gQ-d8G"/>
+                            <constraint firstItem="SUT-2z-QfI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="b7W-WK-MIw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SUT-2z-QfI" secondAttribute="trailing" constant="16" id="kYg-wZ-EdW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="choosenImage" destination="pkw-KY-maN" id="Uaz-4f-nGf"/>
+                        <outlet property="choosenLabel" destination="msD-gy-Pab" id="xC5-ko-jhf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Ljc-5u-ikD">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bEc-O3-XMS" customClass="SecondViewController" customModule="NotificationsAndObserversSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zq7-7F-o1d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="blx-2u-kvr">
+                                <rect key="frame" x="139.5" y="253.5" width="96" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiE-9A-d3d">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                        <state key="normal" title="Choose Apple"/>
+                                        <connections>
+                                            <action selector="appleWasTapped:" destination="bEc-O3-XMS" eventType="touchUpInside" id="sgC-p8-yHL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQP-Fc-RHR">
+                                        <rect key="frame" x="0.0" y="130" width="96" height="30"/>
+                                        <state key="normal" title="Choose Star"/>
+                                        <connections>
+                                            <action selector="starWasTapped:" destination="bEc-O3-XMS" eventType="touchUpInside" id="rRT-Pd-jG5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="blx-2u-kvr" firstAttribute="centerY" secondItem="zq7-7F-o1d" secondAttribute="centerY" id="qlD-fY-Qlg"/>
+                            <constraint firstItem="blx-2u-kvr" firstAttribute="centerX" secondItem="zq7-7F-o1d" secondAttribute="centerX" id="t8k-qf-AdS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kXU-Dh-UeA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkw-Z2-5Cj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="143"/>
+        </scene>
+    </scenes>
+</document>
